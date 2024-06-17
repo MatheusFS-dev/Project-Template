@@ -54,3 +54,13 @@ Save the current list of installed packages to a file.
 ```bash
 pip freeze > requirements.txt
 ```
+## Create a virtual environment with system site packages
+This is good if using Tensorrt in a virtual environment or when having path problems.
+```bash
+virtualenv --system-site-packages .venv
+source .venv/bin/activate
+pip install --upgrade pip
+
+pip install --upgrade nvidia-pyindex
+pip install -r ./requirements.txt
+```
