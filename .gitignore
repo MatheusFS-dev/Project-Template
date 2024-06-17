@@ -1,0 +1,13 @@
+__pycache__/
+.vscode/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+venv/
+ENV/
+env/
+.venv/
+
+# TensorRT
+TensorRT-10.0.1.6/
