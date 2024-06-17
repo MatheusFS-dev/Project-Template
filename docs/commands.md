@@ -32,6 +32,7 @@ Push the branch and tag to the remote repository.
 ```bash
 git push https://your_token@github.com/YourUsername/YourRepo.git branch
 git push origin v1.0
+git push origin v1.0 --force
 ```
 
 ## Python Virtual Environment
