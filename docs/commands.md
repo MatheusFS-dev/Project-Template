@@ -40,13 +40,13 @@ git push origin v1.0 --force
 ### Create a Conda Environment
 
 ```bash
-conda create --name cuda-env python=3.11
+conda create --name .conda python=3.11
 ```
 
 Activate the environment:
 
 ```bash
-conda activate cuda-env
+conda activate .conda
 ```
 
 ### Install CUDA Toolkit
