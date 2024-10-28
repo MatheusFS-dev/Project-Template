@@ -35,6 +35,26 @@ git push origin v1.0
 git push origin v1.0 --force
 ```
 
+## Conda Virtual Environment with CUDA
+
+### Create a Conda Environment
+
+```bash
+conda create --name cuda-env python=3.11
+```
+
+Activate the environment:
+
+```bash
+conda activate cuda-env
+```
+
+### Install CUDA Toolkit
+
+```bash
+conda install -c conda-forge cudatoolkit=11.8 cudnn
+```
+
 ## Python Virtual Environment
 
 ### Create Virtual Environment
@@ -63,94 +83,3 @@ pip install --upgrade pip
 pip install --upgrade nvidia-pyindex
 pip install -r ./requirements.txt
 ```
-
-# How to Use Git LFS
-
-## Install Git LFS on ubuntu
-
-1. **Install Git LFS**:
-   ```sh
-   sudo apt install git-lfs
-   ```
-
-## Step 1: Initialize the Git LFS after installation:
-
-1. **Initialize Git LFS**:
-   ```sh
-   git lfs install
-   ```
-
-## Step 2: Configure Git LFS for Your Repository
-
-1. **Navigate to your repository**:
-   ```sh
-   cd /path/to/your/repo
-   ```
-
-2. **Track specific file types**:
-   For example, if you want to track all `.psd` files:
-   ```sh
-   git lfs track "*.psd"
-   ```
-
-   This command will create a `.gitattributes` file in your repository with the necessary configuration.
-
-3. **Add and commit the `.gitattributes` file**:
-   ```sh
-   git add .gitattributes
-   git commit -m "Track PSD files with Git LFS"
-   ```
-
-## Step 3: Using Git LFS
-
-1. **Add individual large files if you want**:
-   ```sh
-   git add path/to/large/file.psd
-   ```
-
-2. **Commit the files**:
-   ```sh
-   git commit -m "Add large file"
-   ```
-
-3. **Push to the remote repository**:
-   ```sh
-   git push origin main
-   ```
-
-   Git LFS will handle the large files appropriately during the push.
-
-## Step 4: Cloning a Repository with Git LFS
-
-When cloning a repository that uses Git LFS, simply clone as usual:
-```sh
-git clone https://github.com/your/repo.git
-```
-
-Git LFS will automatically fetch the large files.
-
-## Step 5: Pulling and Fetching LFS Objects
-
-If you need to update the LFS files after pulling updates from the repository:
-```sh
-git lfs pull
-```
-
-You can also fetch specific LFS objects:
-```sh
-git lfs fetch
-```
-
-## Additional Tips
-
-- To see which files are being tracked by Git LFS:
-  ```sh
-  git lfs ls-files
-  ```
-
-- To untrack a file (e.g., if you no longer want a file to be managed by Git LFS):
-  ```sh
-  git lfs untrack "*.psd"
-  ```
-
-  Then commit the changes to `.gitattributes`.
