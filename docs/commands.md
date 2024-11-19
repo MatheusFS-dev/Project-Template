@@ -40,19 +40,30 @@ git push origin v1.0 --force
 ### Create a Conda Environment
 
 ```bash
-conda create --name .conda python=3.11
+conda create --prefix ./env tensorflow-gpu
 ```
 
 Activate the environment:
 
 ```bash
-conda activate .conda
+conda activate ./env
 ```
 
-### Install CUDA Toolkit
+### Install ipykernel
 
 ```bash
-conda install -c conda-forge cudatoolkit=11.8 cudnn
+pip install ipykernel notebook
+```
+
+### Add venv to kernels
+
+```bash
+python -m ipykernel install --user --name=tf-gpu --display-name "Python (tf-gpu)"
+```
+
+Verify by running:
+```bash
+jupyter kernelspec list
 ```
 
 ## Python Virtual Environment
