@@ -66,6 +66,11 @@ Verify by running:
 jupyter kernelspec list
 ```
 
+### Add Cuda to any conda enviroment
+```bash
+conda install -c conda-forge cudatoolkit cudnn
+```
+
 ## Python Virtual Environment
 
 ### Create Virtual Environment
