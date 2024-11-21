@@ -71,6 +71,10 @@ jupyter kernelspec list
 conda install -c conda-forge cudatoolkit cudnn
 ```
 
+```bash
+pip install tensorflow[and-cuda]
+```
+
 ## Python Virtual Environment
 
 ### Create Virtual Environment
