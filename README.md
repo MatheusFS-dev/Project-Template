@@ -28,6 +28,15 @@ To set up the development environment, follow these steps:
    pip install -r requirements.txt
    ```
 
+> [!WARNING]
+> This is an example of a warning message.
+
+
+> [!NOTE]
+> This is an example of a note message.
+
+[assets/minecraft/lang/$_langs.bat](https://github.com/Shrimpsnail/Immersive-Interfaces/blob/main/assets/minecraft/lang/%24_langs.bat) This is an example of a link to a file.
+
 ## License
 
 This project is licensed under the General Public License.
