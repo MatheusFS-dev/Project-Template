@@ -1,17 +1,14 @@
 # --------------------------------------------------------------------------- #
-# Module: scientific_plot.py
 # Purpose: Create a scientific-style plot for multiple datasets.
 # 
 # Author: Matheus Ferreira Silva
 # GitHub: https://github.com/MatheusFS-dev
-# Created: 2024-11-27
-# Last Modified: 2024-11-27
-# Dependencies: matplotlib, numpy (optional for smooth data handling)
+# Last Modified: 23 December 2024
 #
 # --------------------------------------------------------------------------- #
 
 import matplotlib.pyplot as plt
-from typing import List, Optional
+from typing import List, Optional, Tuple
 
 def plot_scientific(
     x: List[float],
@@ -26,6 +23,8 @@ def plot_scientific(
     line_styles: Optional[List[str]] = None,
     legend_loc: str = "best",
     grid: bool = True,
+    xlim: Optional[Tuple[float, float]] = None,
+    ylim: Optional[Tuple[float, float]] = None,
     save_path: Optional[str] = None,
     dpi: int = 300
 ) -> None:
@@ -45,6 +44,8 @@ def plot_scientific(
         line_styles (Optional[List[str]]): List of line styles for each dataset.
         legend_loc (str): Location of the legend. Default is "best".
         grid (bool): Whether to display a grid. Default is True.
+        xlim (Optional[Tuple[float, float]]): Limits for the X-axis as (min, max). Default is None.
+        ylim (Optional[Tuple[float, float]]): Limits for the Y-axis as (min, max). Default is None.
         save_path (Optional[str]): Path to save the plot as a file. Default is None.
         dpi (int): Resolution of the saved plot in dots per inch. Default is 300.
 
@@ -71,6 +72,12 @@ def plot_scientific(
     plt.title(title, fontsize=14, weight='bold')
     plt.legend(loc=legend_loc, fontsize=10)
     
+    # Configure axis limits
+    if xlim:
+        plt.xlim(xlim)
+    if ylim:
+        plt.ylim(ylim)
+
     # Configure X-axis for integers only
     if x_integer:
         plt.xticks(ticks=range(int(min(x)), int(max(x)) + 1))
@@ -109,7 +116,9 @@ if __name__ == "__main__":
         y_label="Value",
         title="Example Plot with Line Styles and Logarithmic Scale",
         x_integer=True,
-        y_log=True,
+        # xlim=(0, 6),
+        ylim=(0, 6),
+        y_log=False,
         markers=['o', 's', '^'],  # Circle, square, and triangle markers
         line_styles=['-', '--', ':'],  # Solid, dashed, and dotted line styles
         save_path="example_plot_with_styles.png"
