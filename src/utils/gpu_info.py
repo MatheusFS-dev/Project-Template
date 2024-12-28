@@ -29,34 +29,22 @@ def get_gpu_info():
         print(f"CUDA Version: {build_info['cuda_version']}")
         print(f"cuDNN Version: {build_info['cudnn_version']}")
     else:
-        print("Running on CPU (No CUDA support detected).")
+        print("Running on CPU (No CUDA support detected)")
 
     # Detect available GPUs
-    gpus = tf.config.list_physical_devices('GPU')
+    gpus = tf.config.list_physical_devices("GPU")
     if gpus:
-        print(f"Number of GPUs detected: {len(gpus)}")
-        print(f"Available GPU(s): {[gpu.name for gpu in gpus]}")
-        for i, gpu in enumerate(gpus):
-            # Get GPU details using logical device configuration
-            details = tf.config.experimental.get_device_details(gpu)
-
-            memory_info = tf.config.experimental.get_memory_info(gpu.name)
-            print(f"GPU {i} Details:")
-            print(f"  Name: {details.get('device_name', 'Unknown')}")
-            print(f"  Total Memory: {memory_info.get('total', 'Unknown')} bytes")
-            print(f"  Free Memory: {memory_info.get('free', 'Unknown')} bytes")
-
-        print(f"Using GPU: {tf.test.gpu_device_name()}")
+        print(f"\nNumber of GPUs detected: {len(gpus)}")
+        print(f"Available GPU(s): {[gpu.name for gpu in gpus]}\n")
+        tf.test.gpu_device_name()
     else:
-        print("No GPUs found. Running on CPU.")
+        print("No GPUs found")
+        print("Running on CPU")
 
 def enable_memory_growth():
     """
     Enables memory growth for all detected GPUs.
     """
-    # Specify GPU to use (e.g., GPU 0)
-    os.environ["CUDA_VISIBLE_DEVICES"] = "0"
-
     gpus = tf.config.list_physical_devices('GPU')
     if gpus:
         for i, gpu in enumerate(gpus):
@@ -67,5 +55,8 @@ def enable_memory_growth():
                 print(f"Error enabling memory growth for GPU {i}: {gpu.name}, {e}")
 
 if __name__ == "__main__":
+    # Specify GPU to use (e.g., GPU 0)
+    os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+    
     get_gpu_info()
     enable_memory_growth()
