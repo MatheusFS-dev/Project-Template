@@ -216,5 +216,5 @@ def greet(name: str) -> str:
 - [Example File Link](assets/minecraft/lang/$_langs.bat)
 
 
-Hover over this text for a tooltip: <span title="This is a tooltip!">hover here</span>.
+[Hover your mouse here to see the tooltip](https://stackoverflow.com/a/71729464/11465149 "This is a tooltip :)")
 
