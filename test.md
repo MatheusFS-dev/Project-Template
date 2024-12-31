@@ -216,26 +216,5 @@ def greet(name: str) -> str:
 - [Example File Link](assets/minecraft/lang/$_langs.bat)
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Popover Example</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-  <button type="button" class="btn btn-secondary" data-bs-toggle="popover" title="Popover Title" data-bs-content="This is a popover example!">
-    Click me
-  </button>
+Hover over this text for a tooltip: <span title="This is a tooltip!">hover here</span>.
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // Initialize popover
-    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
-    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-      return new bootstrap.Popover(popoverTriggerEl);
-    });
-  </script>
-</body>
-</html>
