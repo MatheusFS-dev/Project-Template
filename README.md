@@ -12,6 +12,7 @@ TODO: Add a concise description of your project.
 4. [Usage](#usage)
 5. [Contributing](#contributing)
 6. [License](#license)
+7. [Comparison Table Example](#comparison-table-example)
 
 ---
 
@@ -126,6 +127,22 @@ pytest --cov=your_package
 ## License
 
 This project is licensed under the **[General Public License](LICENSE)**.
+
+---
+
+## Comparison Table Example
+
+Below is a comparative table for feature analysis:
+
+| Feature         | Project A            | Project B            | Project C            |
+|------------------|----------------------|----------------------|----------------------|
+| Ease of Use      | ⭐⭐⭐⭐⭐               | ⭐⭐⭐⭐                | ⭐⭐⭐                 |
+| Performance      | ⭐⭐⭐⭐                | ⭐⭐⭐⭐⭐               | ⭐⭐⭐⭐⭐               |
+| Community Support| ⭐⭐⭐⭐⭐               | ⭐⭐⭐                 | ⭐⭐⭐⭐                |
+| Documentation    | ⭐⭐⭐⭐⭐               | ⭐⭐⭐⭐                | ⭐⭐                  |
+
+> [!NOTE]
+> Use ⭐ ratings for a quick overview of features.
 
 ---
 
