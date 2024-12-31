@@ -3,12 +3,6 @@
 
 <h2 align="center">A passionate Software Developer from Brazil</h2>
 
-<p align="center">
-  <a href="https://github.com/MatheusFS-dev?tab=repositories&type=source">
-    <img src="https://github-metrics.vercel.app/api?username=MatheusFS-dev" alt="GitHub Metrics" />
-  </a>
-</p>
-
 - 🔭 I’m currently working on **Machine Learning** projects
 
 - ⚡ Fun fact: **I am a Telecommunications Engineering Student and Researcher**
@@ -21,7 +15,7 @@
 
 ## 📈 Statistics
 
-![Code Time](http://img.shields.io/badge/Don't-even-know-anymore-blue)
+![Code Time](http://img.shields.io/badge/Don%27t-even-know-anymore-blue)
 
 **I'm a Daytime Person 🌞**
 
