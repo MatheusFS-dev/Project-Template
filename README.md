@@ -6,19 +6,33 @@ TODO: Add a concise description of your project.
 
 ## Table of Contents
 
-1. [About the Project](#about-the-project)
-2. [Features](#features)
-3. [Installation Instructions](#installation-instructions)
-4. [Usage](#usage)
-5. [Contributing](#contributing)
-6. [License](#license)
-7. [Comparison Table Example](#comparison-table-example)
+- [Project Title](#project-title)
+  - [Table of Contents](#table-of-contents)
+  - [About the Project](#about-the-project)
+  - [Features](#features)
+  - [Installation Instructions](#installation-instructions)
+    - [Prerequisites](#prerequisites)
+    - [Steps](#steps)
+  - [Usage](#usage)
+    - [Example Command](#example-command)
+    - [Expected Output](#expected-output)
+  - [Contributing](#contributing)
+  - [Testing](#testing)
+    - [Running Tests](#running-tests)
+    - [Coverage Report](#coverage-report)
+  - [License](#license)
+  - [Comparison Table Example](#comparison-table-example)
+  - [Badges and Shields](#badges-and-shields)
+  - [References](#references)
 
 ---
 
 ## About the Project
 
 > A brief overview of what this project is about and its purpose. Add diagrams, if applicable.
+
+
+This is a [hover text](## "your hover text") example.
 
 ---
 
@@ -143,6 +157,17 @@ Below is a comparative table for feature analysis:
 
 > [!NOTE]
 > Use ⭐ ratings for a quick overview of features.
+
+<details>
+<summary>Click to expand</summary>
+
+This is the hidden content that shows when you expand the dropdown.
+
+- Item 1
+- Item 2
+- Item 3
+
+</details>
 
 ---
 
