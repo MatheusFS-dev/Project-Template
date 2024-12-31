@@ -1,15 +1,7 @@
-"""
-# --------------------------------------------------------------------------- #
-# Module: gpu_info.py
-# Purpose: Detect and display GPU, CUDA, and TensorFlow details.
-# 
-# Author: Matheus Ferreira Silva
-# GitHub: https://github.com/MatheusFS-dev
-# Created: 2024-12-19
-# Last Modified: 2024-12-19
-# Dependencies: TensorFlow
-# --------------------------------------------------------------------------- #
-"""
+# ---------------------------------------------------------------------------- #
+#                      Authored by Matheus Ferreira Silva                      #
+#                           github.com/MatheusFS-dev                           #
+# ---------------------------------------------------------------------------- #    
 
 import tensorflow as tf
 import os

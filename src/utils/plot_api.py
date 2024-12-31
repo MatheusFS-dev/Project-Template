@@ -1,11 +1,7 @@
-# --------------------------------------------------------------------------- #
-# Purpose: Create a scientific-style plot for multiple datasets.
-#
-# Author: Matheus Ferreira Silva
-# GitHub: https://github.com/MatheusFS-dev
-# Last Modified: 23 December 2024
-#
-# --------------------------------------------------------------------------- #
+# ---------------------------------------------------------------------------- #
+#                      Authored by Matheus Ferreira Silva                      #
+#                           github.com/MatheusFS-dev                           #
+# ---------------------------------------------------------------------------- #    
 
 import matplotlib.pyplot as plt
 from typing import List, Optional, Tuple

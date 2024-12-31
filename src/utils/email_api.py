@@ -1,14 +1,7 @@
-# --------------------------------------------------------------------------- #
-# Module: send_email.py
-# Purpose: Sends emails using credentials stored in a file.
-#
-# Author: Matheus Ferreira Silva
-# GitHub: https://github.com/MatheusFS-dev
-# Created: 2024-11-25
-# Last Modified: 2024-11-25
-# Dependencies: smtplib, email.mime
-#
-# --------------------------------------------------------------------------- #
+# ---------------------------------------------------------------------------- #
+#                      Authored by Matheus Ferreira Silva                      #
+#                           github.com/MatheusFS-dev                           #
+# ---------------------------------------------------------------------------- #    
 
 import json
 import smtplib
