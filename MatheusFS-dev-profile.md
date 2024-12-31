@@ -15,7 +15,7 @@
 
 ## 📈 Statistics
 
-![Code Time](http://img.shields.io/badge/Don%27t-even-know-anymore-blue)
+![Code Time](http://img.shields.io/badge/Code%20Time-I%20don't%20even%20know%20anymore-blue)
 
 **I'm a Daytime Person 🌞**
 
