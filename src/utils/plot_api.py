@@ -5,6 +5,8 @@
 
 import matplotlib.pyplot as plt
 from typing import List, Optional, Tuple
+import seaborn as sns
+import numpy as np
 
 
 def plot_scientific(
@@ -187,6 +189,90 @@ def plot_histogram(
     # Show histogram
     plt.show()
 
+
+def plot_boxplot_scientific(
+    dataset: np.ndarray,
+    x_label: str = "Columns",
+    y_label: str = "Values",
+    title: str = "Boxplot of Dataset Columns",
+    figsize: Tuple[int, int] = (12, 8),
+    box_color: str = "gray",
+    flier_color: str = "black",
+    flier_size: int = 6,
+    grid: bool = True,
+    grid_style: str = "--",
+    grid_alpha: float = 0.7,
+    xlim: Optional[Tuple[float, float]] = None,
+    ylim: Optional[Tuple[float, float]] = None,
+    tick_rotation: int = 0,
+    dpi: int = 300,
+    save_path: Optional[str] = None,
+    hide_xlabels: bool = False,
+) -> Optional[str]:
+    """
+    Generates a highly configurable scientific-style boxplot.
+
+    Args:
+        dataset (np.ndarray): The dataset as a 2D NumPy array.
+        x_label (str): Label for the X-axis. Default is "Columns".
+        y_label (str): Label for the Y-axis. Default is "Values".
+        title (str): Title of the plot. Default is "Boxplot of Dataset Columns".
+        figsize (Tuple[int, int]): Size of the figure in inches. Default is (12, 8).
+        box_color (str): Color of the boxes in the boxplot. Default is "gray".
+        flier_color (str): Color of outlier points. Default is "black".
+        flier_size (int): Size of the outlier points. Default is 6.
+        grid (bool): Whether to show grid lines. Default is True.
+        grid_style (str): Style of the grid lines. Default is "--".
+        grid_alpha (float): Transparency of the grid lines. Default is 0.7.
+        xlim (Optional[Tuple[float, float]]): Limits for the X-axis. Default is None.
+        ylim (Optional[Tuple[float, float]]): Limits for the Y-axis. Default is None.
+        tick_rotation (int): Rotation angle for X-axis tick labels. Default is 45.
+        dpi (int): DPI for the saved plot image. Default is 300.
+        save_path (Optional[str]): File path to save the plot. If None, the plot is displayed.
+        hide_xlabels (bool): Whether to hide X-axis labels. Default is False.
+    
+    Returns:
+        Optional[str]: The file path of the saved plot, or None if not saved.
+    """
+    # Create the plot
+    plt.figure(figsize=figsize)
+    sns.boxplot(
+        data=dataset,
+        orient="v",
+        color=box_color,
+        fliersize=flier_size,
+        linewidth=1.5,
+        flierprops=dict(marker='o', color=flier_color, markerfacecolor=flier_color),
+    )
+
+    # Configure titles and labels
+    plt.title(title, fontsize=18, weight="bold")
+    plt.xlabel(x_label, fontsize=16)
+    plt.ylabel(y_label, fontsize=16)
+
+    # Configure axis limits
+    if xlim:
+        plt.xlim(xlim)
+    if ylim:
+        plt.ylim(ylim)
+
+    # Configure ticks
+    plt.xticks(fontsize=12, rotation=tick_rotation)
+    plt.yticks(fontsize=12)
+
+    # Hide X-axis labels if requested
+    if hide_xlabels:
+        plt.xticks([])
+
+    # Configure grid
+    if grid:
+        plt.grid(visible=True, linestyle=grid_style, linewidth=0.5, alpha=grid_alpha)
+
+    # Save or show the plot
+    if save_path:
+        plt.savefig(save_path, dpi=dpi, bbox_inches="tight")   
+    plt.show()
+    
 
 # Example code
 if __name__ == "__main__":
